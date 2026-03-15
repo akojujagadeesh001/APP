@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .apple-btn {
+    @apply rounded-full px-6 py-3 font-semibold transition-all duration-200 active:scale-95 flex items-center justify-center;
+  }
+  .apple-btn-primary {
+    @apply apple-btn bg-[#0071E3] text-white hover:bg-[#0077ED] shadow-sm;
+  }
+  .apple-btn-secondary {
+    @apply apple-btn bg-[#F2F2F7] text-gray-900 hover:bg-[#E5E5EA];
+  }
+  .apple-card {
+    @apply bg-white rounded-2xl border border-[#F2F2F7] shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  .apple-input {
+    @apply w-full px-4 py-3 rounded-xl border border-[#D1D1D6] focus:border-[#0071E3] focus:ring-1 focus:ring-[#0071E3] outline-none transition-colors bg-[#F2F2F7] focus:bg-white;
+  }
+}
+
