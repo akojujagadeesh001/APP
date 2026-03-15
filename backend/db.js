@@ -14,17 +14,3 @@ if (!existing) {
   db.prepare('INSERT INTO users (name,email,password,role) VALUES (?,?,?,?)').run('Pete','pete@servenow.com','provider123','provider');
 }
 module.exports = db;
-```
-
-Press **Ctrl+S** to save.
-
----
-
-**Step 2 — Push to GitHub**
-
-In Git Bash type these one by one:
-```
-cd "/c/Users/priya/OneDrive/Desktop/ServeNow"
-git add .
-git commit -m "fix db"
-git push origin master
