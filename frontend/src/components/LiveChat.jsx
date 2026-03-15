@@ -11,7 +11,7 @@ export default function LiveChat({ bookingId, currentUser }) {
 
   useEffect(() => {
     // Connect to Socket
-    socketRef.current = io('http://localhost:5000');
+    socketRef.current = io(import.meta.env.VITE_API_URL?.replace('/api','') || 'http://localhost:5000');
     
     // Join room
     socketRef.current.emit('join_booking', bookingId);
